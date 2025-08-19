@@ -8,7 +8,7 @@ export const getUserAvatarUrl = (photo) => {
   }
   
   // If it's a filename, construct the full URL
-  return `https://shopDirect-api.onrender.com/img/users/${photo}`;
+  return `https://shopdirect-api.onrender.com/img/users/${photo}`;
 };
 
 // Helper function to get image URL for any type
@@ -26,5 +26,5 @@ export const getImageUrl = (imagePath, type = 'users') => {
   }
   
   // Otherwise, construct the full URL
-  return `https://shopDirect-api.onrender.com/img/${type}/${imagePath}`;
+  return `https://shopdirect-api.onrender.com/img/${type}/${imagePath}`;
 }; 

@@ -1,5 +1,5 @@
 // API Configuration
-export const API_BASE_URL = 'https://shopDirect-api.onrender.com/api/v4';
+export const API_BASE_URL = 'https://shopdirect-api.onrender.com/api/v4';
 
 // API endpoints
 export const API_ENDPOINTS = {
