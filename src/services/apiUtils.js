@@ -70,7 +70,7 @@ export const getImageUrl = (imagePath) => {
   }
 
   // Use the format: https://shopdirect-api.onrender.com/img/${imagePath}
-  return `https://shopdirect-api.onrender.com/img/${imagePath}`;
+  return `https://shopdirect-api.onrender.com/img/products/${imagePath}`;
 };
 
 /**
