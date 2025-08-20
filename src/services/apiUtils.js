@@ -69,8 +69,8 @@ export const getImageUrl = (imagePath) => {
     return "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop";
   }
 
-  // Use the format: https://shopdirect-api.onrender.com/img/products/${imagePath}
-  return `https://shopdirect-api.onrender.com/img/products/${imagePath}`;
+  // Use the format: https://shopdirect-api.onrender.com/img/${imagePath}
+  return `https://shopdirect-api.onrender.com/img/${imagePath}`;
 };
 
 /**
