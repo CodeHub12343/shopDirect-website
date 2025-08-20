@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '../config/api';
+
 // Mock data for fallback when API is not available
 const mockCategories = [
   {
@@ -54,7 +56,7 @@ const mockCategories = [
 
 export const getCategories = async () => {
   try {
-    const response = await fetch("http://127.0.0.1:5000/api/v4/categories");
+    const response = await fetch(`${API_BASE_URL}/categories`);
 
     if (!response.ok) {
       console.warn("API server not available, using mock data");

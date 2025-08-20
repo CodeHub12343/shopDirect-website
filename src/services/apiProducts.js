@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '../config/api';
+
 // Mock product data for fallback
 const getMockProducts = () => {
   return [
@@ -522,7 +524,7 @@ export const getProducts = async (filters = {}) => {
       queryParams.append("category", filters.category);
     }
 
-    const url = `http://127.0.0.1:5000/api/v4/products${
+    const url = `${API_BASE_URL}/products${
       queryParams.toString() ? `?${queryParams.toString()}` : ""
     }`;
     const response = await fetch(url);
@@ -570,7 +572,7 @@ export const getProducts = async (filters = {}) => {
 export const getProduct = async (productId) => {
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/v4/products/${productId}`
+      `${API_BASE_URL}/products/${productId}`
     );
 
     if (!response.ok) {
@@ -600,7 +602,7 @@ export const getRelatedProducts = async (productId, limit = 4) => {
     queryParams.append("category", currentProduct.category._id || currentProduct.category.id);
     queryParams.append("limit", limit + 1); // Get one extra to account for current product
     
-    const url = `http://127.0.0.1:5000/api/v4/products?${queryParams.toString()}`;
+    const url = `${API_BASE_URL}/products?${queryParams.toString()}`;
     const response = await fetch(url);
 
     if (!response.ok) {
